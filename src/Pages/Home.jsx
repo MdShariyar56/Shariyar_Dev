@@ -86,7 +86,7 @@ const Home = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
-            <a href="/assets/CV.pdf" download>
+            <a href="/CV/shariyar_kobir.pdf" download>
               <button className="px-6 py-3 sm:px-8 sm:py-4 rounded-full 
                                  bg-blue-600 text-white font-semibold 
                                  hover:bg-blue-700 transition">

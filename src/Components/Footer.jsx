@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Social */}
           <div className="flex gap-4 mt-5 flex-wrap">
             {[
-              { icon: <FaGithub />, link: "https://github.com/" },
+              { icon: <FaGithub />, link: "https://github.com/MdShariyar56" },
               { icon: <FaLinkedinIn />, link: "https://linkedin.com/" },
               { icon: <FaFacebookF />, link: "https://facebook.com/" },
               { icon: <FaEnvelope />, link: "mailto:shariyarkobir2005@gmail.com" },
