@@ -46,7 +46,7 @@ const Navbar = () => {
 
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-4 justify-end flex-1">
+        <ul className="hidden md:flex gap-4 justify-end flex-1 text-white">
           {sections.map((section) => (
             <li key={section}>
               <a
@@ -64,7 +64,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="md:hidden flex justify-end flex-1">
           <button
-            className="text-2xl font-bold"
+            className="text-2xl text-white font-bold"
             onClick={() => setOpen(!open)}
           >
             {open ? "✕" : "☰"}
