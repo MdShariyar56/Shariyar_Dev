@@ -4,7 +4,7 @@ import { ExternalLink, Github, Info, ArrowUp } from "lucide-react";
 const FeaturedProject = () => {
   return (
     <section id="project">
-      <div className="   min-h-screen text-white p-4 sm:p-8 font-sans">
+      <div className=" bg-gray-900  min-h-screen text-white p-4 sm:p-8 font-sans">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-white uppercase">

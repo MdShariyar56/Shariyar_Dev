@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen py-8 px-2 flex flex-col items-center 
+      className="bg-gray-900 relative min-h-screen py-8 px-2 flex flex-col items-center 
       scroll-mt-20 overflow-hidden"
     >
       {/* 🔵 Background Lottie */}

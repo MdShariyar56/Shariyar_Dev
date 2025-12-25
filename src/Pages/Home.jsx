@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen flex items-center 
+      className="bg-gray-900 relative overflow-hidden min-h-screen flex items-center 
                 
                  px-4 sm:px-6 lg:px-8"
     >

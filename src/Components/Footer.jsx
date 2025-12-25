@@ -10,7 +10,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#020617] text-gray-300 pt-16">
+    <footer className="bg-slate-800 relative overflow-hidden  text-gray-300 pt-16">
 
       {/* Glow */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 

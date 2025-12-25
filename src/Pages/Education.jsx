@@ -34,7 +34,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative overflow-hidden py-8 px-4"
+      className="bg-gray-900 relative overflow-hidden py-8 px-4"
     >
       {/* 🔵 Background Lottie */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none opacity-12">

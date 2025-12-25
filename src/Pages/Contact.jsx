@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className=" py-8 px-4"
+      className="bg-gray-900 py-8 px-4"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -20,7 +20,7 @@ const Contact = () => {
         </p>
 
         {/* Main Content */}
-        <div className="bg-gray-800  border-2 border-white rounded-2xl shadow-xl p-6 md:p-10 
+        <div className="bg-green-100  border-2 border-white rounded-2xl shadow-xl p-6 md:p-10 
         flex flex-col md:flex-row items-center gap-10">
           
           {/* Left Side: Lottie */}
@@ -36,7 +36,7 @@ const Contact = () => {
           <div className="md:w-1/2 w-full">
             <form className="space-y-5">
               <div>
-                <label className="block text-sm font-semibold mb-1">
+                <label className="block text-black text-sm font-semibold mb-1">
                   Your Name
                 </label>
                 <input
@@ -48,19 +48,19 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold mb-1">
+                <label className="text-black block text-sm font-semibold mb-1">
                   Your Email
                 </label>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg border focus:outline-none 
+                  className="w-full px-4 py-3 rounded-lg border  focus:outline-none 
                   focus:ring-2 focus:ring-blue-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold mb-1">
+                <label className="text-black block text-sm font-semibold mb-1">
                   Message
                 </label>
                 <textarea
@@ -74,7 +74,7 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-400 hover:bg-blue-500
-                text-white font-semibold py-3 rounded-lg transition-all"
+                text-black font-semibold py-3 rounded-lg transition-all"
               >
                 Send Message
               </button>
