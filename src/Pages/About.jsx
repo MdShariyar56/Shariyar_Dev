@@ -52,55 +52,31 @@ const About = () => {
           </div>
           {/* Text Content */}{" "}
           <div className="flex-1 mt-8 lg:mt-0">
-            {" "}
-            <div className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              {" "}
-              <p className="pb-4">
-                {" "}
-                I am a passionate{" "}
-                <span className="font-semibold text-blue-400">
-                  Frontend Developer
-                </span>{" "}
-                with strong skills in{" "}
-                <span className="font-semibold text-blue-400">
-                  React.js, Tailwind CSS, HTML, and JavaScript
-                </span>
-                . I specialize in creating modern, responsive, and
-                high-performance web applications with clean and maintainable
-                code.{" "}
-              </p>{" "}
-              <p className="pb-4">
-                {" "}
-                I also have basic experience with{" "}
-                <span className="font-semibold text-blue-400">
-                  backend
-                </span>{" "}
-                technologies such as{" "}
-                <span className="font-semibold text-blue-400">
-                  {" "}
-                  Node.js, Express.js, and MongoDB
-                </span>
-                , allowing me to understand full-stack development and integrate
-                frontend with APIs effectively.{" "}
-              </p>{" "}
-              <p className="pb-4">
-                {" "}
-                I enjoy translating{" "}
-                <span className="font-semibold text-blue-400">
-                  UI/UX designs{" "}
-                </span>{" "}
-                into functional web applications, optimizing performance, and
-                continuously learning new technologies to deliver polished and
-                user-friendly digital experiences.{" "}
-              </p>{" "}
-              <p>
-                {" "}
-                My goal is to create web applications that not only look great
-                but also provide seamless experiences for users, following best
-                practices in accessibility, performance, and maintainability.{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>
+  <div className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-4">
+    <p>
+      Dedicated <span className="font-semibold text-blue-400">Frontend Developer</span> with strong expertise in 
+      <span className="font-semibold text-blue-400"> HTML5, CSS3, Tailwind/Bootstrap, JavaScript, and React</span>, 
+      and foundational knowledge of <span className="font-semibold text-blue-400">Node.js, Express.js, and MongoDB</span>.
+    </p>
+
+    <p>
+      Skilled in building <span className="font-semibold text-blue-400">responsive, user-friendly websites</span>, 
+      implementing basic backend functionality, and writing clean, maintainable code. 
+      Passionate about learning new technologies and growing as a <span className="font-semibold text-blue-400">full-stack developer</span>.
+    </p>
+
+    <p>
+      Experienced in translating <span className="font-semibold text-blue-400">UI/UX designs</span> into functional web applications, 
+      optimizing performance, and delivering polished digital experiences.
+    </p>
+
+    <p>
+      Goal-oriented and committed to creating web applications that not only look great but also provide 
+      <span className="font-semibold text-blue-400"> seamless user experiences</span>, following best practices in accessibility, performance, and maintainability.
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
