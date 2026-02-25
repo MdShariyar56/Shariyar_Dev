@@ -35,12 +35,12 @@ const FeaturedProject = () => {
             </span>
 
             <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
-             Textdetector – AI Text Humanize Generation System
+             Purifygpt – AI Text Humanize Generation System
             </h3>
 
             <span className="text-yellow-500 font-bold">Description:</span>
             <p className="text-gray-300 mb-3 text-sm sm:text-base leading-relaxed">
-              Textdetector is an AI-powered text humanization platform that
+               Purifygpt is an AI-powered text humanization platform that
               converts machine-like text into natural, human-like content with a
               clean and responsive interface.
             </p>
