@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gray-900 relative min-h-screen py-8 px-2 flex flex-col items-center 
+      className="bg-gray-900 relative min-h-screen py-6 px-2 flex flex-col items-center 
       scroll-mt-20 overflow-hidden"
     >
       {/* 🔵 Background Lottie */}
@@ -34,24 +34,11 @@ const About = () => {
 
         <div className="max-w-7xl w-full flex flex-col lg:flex-row gap-5 lg:gap-30 items-center lg:items-start">
           {/* Profile Image Animation */}
-          <div className="relative w-72 h-96 lg:w-96 lg:h-[450px] flex-shrink-0 overflow-hidden rounded-2xl">
-            <motion.img
-              src="https://i.ibb.co/YFsPYgh4/Gemini-Generated-Image-6orxur6orxur6orx-removebg-preview.png"
-              className="absolute inset-0 w-full h-full rounded-2xl shadow-2xl border-4 border-blue-200"
-              whileHover={{ opacity: 0, scale: 0.9, x: -30 }}
-              transition={{ duration: 0.6 }}
-            />
-
-            <motion.img
-              src="https://i.ibb.co/rKtptnNL/Untitled-2.png"
-              className="absolute inset-0 w-full h-full rounded-2xl shadow-2xl border-4 border-blue-200"
-              initial={{ opacity: 0, scale: 1.1, x: 30 }}
-              whileHover={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            />
+          <div className="relative w-72 h-76 lg:w-90 lg:h-[450px] flex-shrink-0 overflow-hidden ">
+            <img src="https://imglink.cc/cdn/JMKx4R8muY.png" alt="" />
           </div>
           {/* Text Content */}{" "}
-          <div className="flex-1 mt-8 lg:mt-0">
+          <div className="flex-1 ">
   <div className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-4">
     <p>
       Dedicated <span className="font-semibold text-blue-400">Frontend Developer</span> with strong expertise in 
