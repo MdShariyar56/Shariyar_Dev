@@ -164,9 +164,7 @@ const FeaturedProject = () => {
                 <Github size={14} /> Client
               </a>
 
-              <button className="btn btn-outline btn-warning btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4">
-                <Info size={14} /> Details
-              </button>
+              
             </div>
           </div>
           {/* Right Side: Image */}

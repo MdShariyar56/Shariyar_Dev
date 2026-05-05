@@ -12,10 +12,10 @@ const skillsData = [
   { name: "React.js", img: "https://i.ibb.co/vvgXn7pn/react-1183621.png" },
   { name: "Node.js", img: "https://i.ibb.co/Y7kp6n5D/programing-15484303.png" },
   { name: "Express.js", img: "https://i.ibb.co/rRrQvdhY/expressjs-logo.png" },
-  { name: "MongoDB", img: "https://i.ibb.co/BHHXSjfp/mongodb-3-1175138.webp" },
-  { name: "Firebase", img: "https://i.ibb.co/qMpn85sh/Firebase-icon-Logo-PNG-SVG-Vector.png" },
+  { name: "MongoDB", img: "https://imglink.cc/cdn/oe8cL5zRlT.png" },
+  { name: "Firebase", img: "https://imglink.cc/cdn/pNvwkszKSi.png" },
   { name: "GitHub", img: "https://i.ibb.co/W4mM8vcn/social-16065963.png" },
-  { name: "Git", img: "https://i.ibb.co/1YvY2Pdg/social-15466163.png" },
+  { name: "Git", img: "https://imglink.cc/cdn/zMCU7S_kdx.png" },
 
 ];
 
