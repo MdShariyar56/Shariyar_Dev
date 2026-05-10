@@ -1,360 +1,256 @@
+"use client";
+
 import React from "react";
-import { ExternalLink, Github, Info, ArrowUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, ArrowUp } from "lucide-react";
+
+const projects = [
+  {
+    title: "PurifyGPT – AI Text Humanizer",
+    type: "Live Project",
+    image:
+      "https://imglink.cc/cdn/YbDbMPoaZP.png",
+    description:
+      "AI-powered text humanization platform that converts robotic AI-generated text into natural human-like writing.",
+    challenge:
+      "Maintaining smooth real-time AI processing with fast and responsive UI/UX.",
+    goal:
+      "Build a seamless platform for generating natural and engaging human-like content.",
+    tech: ["React", "Tailwind CSS", "JavaScript"],
+    live: "https://textdetector.aireshot.com/",
+    client: "https://github.com/MdShariyar56/NaturalWrite",
+    reverse: false,
+  },
+
+  {
+    title: "CreatifyAI – AI Video Generator",
+    type: "Live Project",
+    image: "https://imglink.cc/cdn/xnkwo9YoVv.png",
+    description:
+      "AI-powered platform for generating videos from text or images with a modern responsive interface.",
+    challenge:
+      "Optimizing AI video processing while keeping the experience smooth and fast.",
+    goal:
+      "Build a fast and user-friendly AI video generation platform.",
+    tech: ["React", "Tailwind CSS", "JavaScript"],
+    live: "https://aivideogen.aireshot.com/",
+    client: "https://github.com/MdShariyar56/UpdateCreatifyAi",
+    reverse: true,
+  },
+
+  {
+    title: "RentWheels – Vehicle Rental System",
+    type: "Featured Project",
+    image: "https://imglink.cc/cdn/AQ0hQn9bzX.png",
+    description:
+      "Modern vehicle rental platform for browsing, booking, and managing vehicles.",
+    challenge:
+      "Managing booking flow, vehicle availability, and secure role-based access.",
+    goal:
+      "Build a reliable and user-friendly rental management platform.",
+    tech: ["React", "Tailwind CSS", "Firebase", "Node.js", "MongoDB"],
+    live: "https://rent-wheels-auth-4c421.web.app/",
+    client: "https://github.com/MdShariyar56/Car-Client",
+    server: "https://github.com/MdShariyar56/Car-Server",
+    reverse: false,
+  },
+
+  {
+    title: "GameHub – Game Management System",
+    type: "Featured Project",
+    image:
+      "https://imglink.cc/cdn/lPtQlT6xYx.png",
+    description:
+      "Modern game management platform where users can browse and manage their favorite games.",
+    challenge:
+      "Implementing secure authentication and accurate user data handling.",
+    goal:
+      "Build an interactive and user-friendly gaming experience.",
+    tech: ["React", "Tailwind CSS", "Firebase"],
+    live: "https://game-hub-auth-e87bc.web.app/",
+    client: "https://github.com/MdShariyar56/Game-Hub",
+    reverse: true,
+  },
+];
 
 const FeaturedProject = () => {
   return (
-    <section id="project">
-      <div className=" bg-gray-900  min-h-screen text-white p-4 sm:p-8 ">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-white uppercase">
-            Featured Projects
-          </h2>
-          <p className="text-blue-400 tracking-widest text-lg sm:text-xl font-medium uppercase">
-            Some of my best works
-          </p>
-        </div>
+    <section
+      id="project"
+      className="bg-gradient-to-b from-[#0f172a] via-[#111827] to-black text-white py-20 px-4 sm:px-6 overflow-hidden"
+    >
+      {/* Section Title */}
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-4xl sm:text-5xl font-black uppercase bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+          Featured Projects
+        </h2>
 
-        {/* Project Card 1 */}
+        <p className="text-gray-400 tracking-[4px] uppercase mt-4 text-sm">
+          Some Of My Best Works
+        </p>
+      </motion.div>
 
-        <div className="max-w-7xl mx-auto bg-[#212230] rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row mb-6">
-          {/* Left Side: Image */}
-          <div className="md:w-1/2 bg-white flex items-center justify-center p-4 md:p-0 overflow-hidden rounded-lg">
-            <img
-              src="https://i.ibb.co/wrRQVrgq/sentient-ai-interacting-with-software-developer-asking-existential-questions.jpg" // Replace with actual image URL
-              alt="CreatifyAi Mockup"
-              className="w-full h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] object-cover p-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-115"
-            />
+      {/* Project Cards */}
+      <div className="space-y-10">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className={`
+              max-w-7xl mx-auto
+              rounded-3xl
+              overflow-hidden
+              grid md:grid-cols-2
+              bg-white/5
+              backdrop-blur-xl
+              border border-white/10
+              hover:border-cyan-400/30
+              transition-all duration-500
+              hover:-translate-y-2
+              hover:shadow-2xl hover:shadow-cyan-500/10
+            `}
+          >
+            {/* Image */}
+            <div
+              className={`
+                relative group overflow-hidden
+                h-[240px] sm:h-[320px] md:h-full
+                ${project.reverse ? "md:order-2" : ""}
+              `}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
 
-          </div>
-
-          {/* Right Side: Content */}
-            <div className="md:w-1/2 p-4 sm:p-6 flex flex-col justify-center order-2 md:order-1">
-            <span className="text-blue-300  text-xs uppercase tracking-widest mb-2 block">
-              <strong>Live Project</strong>
-            </span>
-
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
-             Purifygpt – AI Text Humanize Generation System
-            </h3>
-
-            <span className="text-yellow-500 font-bold">Description:</span>
-            <p className="text-gray-300 mb-3 text-sm sm:text-base leading-relaxed">
-               Purifygpt is an AI-powered text humanization platform that
-              converts machine-like text into natural, human-like content with a
-              clean and responsive interface.
-            </p>
-
-            <span className="text-yellow-500 font-bold">Challenge:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-2">
-              Implementing AI-based text humanization, ensuring content
-              accuracy, and providing real-time feedback to users while
-              maintaining a smooth and responsive interface was the most
-              challenging part of this project.
-            </p>
-
-            <span className="text-yellow-500 font-bold">Goal:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
-              Build a user-friendly platform where users can generate natural,
-              human-like text from AI content efficiently, quickly, and enjoy a
-              seamless creative experience.
-            </p>
-
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["React", "Tailwind CSS", "JavaScript"].map((tech) => (
-                <span
-                  key={tech}
-                  className="badge py-1.5 px-3 rounded-full text-black font-medium bg-cyan-400 font-medium  border-none text-xs sm:text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+              <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-2">
-              <a
-                href="https://textdetector.aireshot.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-warning btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <ExternalLink size={14} /> Live
-              </a>
+            {/* Content */}
+            <div
+              className={`
+                p-5 sm:p-8 flex flex-col justify-center
+                ${project.reverse ? "md:order-1" : ""}
+              `}
+            >
+              <span className="text-cyan-400 text-xs uppercase tracking-[3px] font-semibold mb-2">
+                {project.type}
+              </span>
 
-              <a
-                href="https://github.com/MdShariyar56/NaturalWrite"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost bg-[#2d2e3d] hover:bg-[#3d3e4d] btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <Github size={14} /> Client
-              </a>
-            </div>
-          </div>
+              <h3 className="text-2xl sm:text-3xl font-bold leading-snug mb-5">
+                {project.title}
+              </h3>
 
-         
-        </div>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-yellow-400 font-semibold text-sm mb-1">
+                    Description
+                  </h4>
 
-        {/* Project Card 2 */}
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
 
-        <div className="max-w-7xl mx-auto bg-[#212230] rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row mb-6">
-          {/* Left Side: Content */}
-        
-               <div className="md:w-1/2 p-4 sm:p-6 flex flex-col justify-center">
-            <span className="text-blue-300 text-xs uppercase tracking-widest mb-2 block">
-             <strong> Live Project</strong>
-            </span>
+                <div>
+                  <h4 className="text-yellow-400 font-semibold text-sm mb-1">
+                    Challenge
+                  </h4>
 
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
-              CreatifyAi – AI Video Generation System
-            </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {project.challenge}
+                  </p>
+                </div>
 
-            <span className="text-yellow-500 font-bold">Description:</span>
-            <p className="text-gray-300 mb-3 text-sm sm:text-base leading-relaxed">
-              CreatifyAi is an AI-powered video generation platform that allows
-              users to create videos from text or images with a clean and
-              responsive interface.
-            </p>
+                <div>
+                  <h4 className="text-yellow-400 font-semibold text-sm mb-1">
+                    Goal
+                  </h4>
 
-            <span className="text-yellow-500 font-bold">Challenge:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-2">
-              Implementing AI-based video generation from text and images,
-              handling processing time efficiently, and ensuring smooth UI/UX
-              was the most challenging part of this project.
-            </p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {project.goal}
+                  </p>
+                </div>
+              </div>
 
-            <span className="text-yellow-500 font-bold">Goal:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
-              Build a user-friendly platform where users can generate videos
-              from text or images quickly, efficiently, and enjoy a seamless
-              creative experience.
-            </p>
-
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["React", "Tailwind CSS", "JavaScript"].map((tech) => (
-                <span
-                  key={tech}
-                  className="badge py-1.5 px-3 rounded-full text-black font-medium bg-cyan-400 font-medium border-none text-xs sm:text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-2">
-              <a
-                href="https://aivideogen.aireshot.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-warning btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <ExternalLink size={14} /> Live
-              </a>
-
-              <a
-                href="https://github.com/MdShariyar56/UpdateCreatifyAi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost bg-[#2d2e3d] hover:bg-[#3d3e4d] btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <Github size={14} /> Client
-              </a>
-
-              
-            </div>
-          </div>
-          {/* Right Side: Image */}
-          <div className="md:w-1/2 bg-white flex items-center justify-center p-4 md:p-0 order-1 md:order-2 overflow-hidden rounded-lg">
-            <img
-              src="https://i.ibb.co/jZDX6JKR/7423513.jpg" // Replace with actual image URL
-              alt="CreatifyAi Mockup"
-              className="w-full h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] object-cover p-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-115"
-            />
-          </div>
-        </div>
-
-        {/* Project Card 3 */}
-        <div className="max-w-7xl mx-auto bg-[#212230] rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row mb-6">
-          {/* Left Side: Image */}
-          <div className="md:w-1/2 bg-blue-100 flex items-center justify-center p-4 md:p-0 overflow-hidden ">
-            <img
-              src="https://i.ibb.co/n5jr0f7/car-showroom-04.jpg"
-              alt="Project Mockup"
-              className="w-full h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] p-6 object-cover   shadow-lg  transition duration-300 transform hover:scale-115"
-            />
-          </div>
-
-          {/* Right Side: Content */}
-          <div className="md:w-1/2 p-4 sm:p-6 flex flex-col justify-center">
-            <span className="text-gray-400 text-xs uppercase tracking-widest mb-2 block">
-              Featured Project
-            </span>
-
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
-              RentWheels – Vehicle Rental Management System
-            </h3>
-
-            <span className="text-yellow-500 font-bold">Description:</span>
-            <p className="text-gray-300 mb-3 text-sm sm:text-base leading-relaxed">
-              RentWheels is a modern vehicle rental platform allowing users to
-              browse, book, and manage vehicles with a responsive and clean
-              interface.
-            </p>
-
-            <span className="text-yellow-500 font-bold">Challenge:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-2">
-              Managing booking logic, vehicle availability, and role-based
-              access between users was the toughest part of this project.
-            </p>
-
-            <span className="text-yellow-500 font-bold">Goal:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
-              Build a reliable, user-friendly rental platform with smooth
-              booking flow and secure data handling.
-            </p>
-
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["React", "Tailwind CSS", "Firebase", "Node.js", "MongoDB"].map(
-                (tech) => (
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2 mt-6">
+                {project.tech.map((tech, i) => (
                   <span
-                    key={tech}
-                    className="badge py-1.5 px-3 rounded-full text-black font-medium bg-cyan-400 border-none text-xs sm:text-sm"
+                    key={i}
+                    className="px-3 py-1 rounded-full bg-cyan-400 text-black text-xs font-semibold"
                   >
                     {tech}
                   </span>
-                )
-              )}
-            </div>
+                ))}
+              </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-2">
-              <a
-                href="https://rent-wheels-auth-4c421.web.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-warning btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <ExternalLink size={14} /> Live
-              </a>
-
-              <a
-                href="https://github.com/MdShariyar56/Car-Client"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost bg-[#2d2e3d] hover:bg-[#3d3e4d] btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <Github size={14} /> Client
-              </a>
-
-              <a
-                href="https://github.com/MdShariyar56/Car-Server"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost bg-[#2d2e3d] hover:bg-[#3d3e4d] btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <Github size={14} /> Server
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Project Card 4 */}
-
-        <div className="max-w-7xl mx-auto bg-[#212230] rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row mb-6">
-          {/* Left Side: Content */}
-          <div className="md:w-1/2 p-4 sm:p-6 flex flex-col justify-center order-2 md:order-1">
-            <span className="text-gray-400 text-xs uppercase tracking-widest mb-2 block">
-              Featured Project
-            </span>
-
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
-              GameHub – Game Management System
-            </h3>
-
-            <span className="text-yellow-500 font-bold">Description:</span>
-            <p className="text-gray-300 mb-3 text-sm sm:text-base leading-relaxed">
-              GameHub is a modern game management platform that allows users to
-              browse, manage, and track their favorite games through a clean and
-              responsive interface.
-            </p>
-
-            <span className="text-yellow-500 font-bold">Challenge:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-2">
-              Implementing secure login, sign-in, profile updates, and ensuring
-              accurate data handling for users was the most challenging part of
-              this project.
-            </p>
-
-            <span className="text-yellow-500 font-bold">Goal:</span>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
-              To build a user-friendly and interactive platform where players
-              can manage games, update their profiles, and enjoy a seamless
-              gaming experience.
-            </p>
-
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {["React", "Tailwind CSS", "Firebase"].map((tech) => (
-                <span
-                  key={tech}
-                  className="badge py-1.5 px-3 rounded-full text-black font-medium bg-cyan-400 border-none text-xs sm:text-sm"
+              {/* Buttons */}
+              <div className="flex flex-wrap gap-3 mt-7">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-sm bg-yellow-400 hover:bg-yellow-500 text-black border-none rounded-xl"
                 >
-                  {tech}
-                </span>
-              ))}
+                  <ExternalLink size={16} />
+                  Live
+                </a>
+
+                <a
+                  href={project.client}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-sm bg-white/10 hover:bg-white/20 text-white border border-white/10 rounded-xl"
+                >
+                  <Github size={16} />
+                  Client
+                </a>
+
+                {project.server && (
+                  <a
+                    href={project.server}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm bg-white/10 hover:bg-white/20 text-white border border-white/10 rounded-xl"
+                  >
+                    <Github size={16} />
+                    Server
+                  </a>
+                )}
+              </div>
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-2">
-              <a
-                href="https://game-hub-auth-e87bc.web.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-warning btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <ExternalLink size={14} /> Live
-              </a>
-
-              <a
-                href="https://github.com/MdShariyar56/Game-Hub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-ghost bg-[#2d2e3d] hover:bg-[#3d3e4d] btn-xs sm:btn-sm normal-case flex items-center gap-1 sm:gap-2 px-3 sm:px-4"
-              >
-                <Github size={14} /> Client
-              </a>
-            </div>
-          </div>
-
-          {/* Right Side: Image */}
-          <div className="md:w-1/2 bg-white flex items-center justify-center p-4 md:p-0 order-1 md:order-2 overflow-hidden rounded-lg">
-            <img
-              src="https://i.ibb.co/d41SWwc0/view-3d-video-game-controller.jpg"
-              alt="GameHub Mockup"
-              className="w-full h-full min-h-[300px] sm:min-h-[350px] md:min-h-[400px] object-cover p-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-115"
-            />
-          </div>
-        </div>
-
-        {/* Floating Action Button */}
-        <div className="fixed bottom-10 right-4 sm:bottom-10 sm:right-8 z-50">
-          <button
-            onClick={() =>
-              document.getElementById("home")?.scrollIntoView({
-                behavior: "smooth",
-              })
-            }
-            className="btn btn-circle btn-warning shadow-lg"
-          >
-            <ArrowUp size={20} />
-          </button>
-        </div>
+          </motion.div>
+        ))}
       </div>
+
+      {/* Scroll To Top */}
+      <motion.div
+        animate={{ y: [0, -8, 0] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+        className="fixed bottom-6 right-5 z-50"
+      >
+        <button
+          onClick={() =>
+            document.getElementById("home")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+          className="btn btn-circle bg-cyan-400 hover:bg-cyan-500 border-none text-black shadow-xl"
+        >
+          <ArrowUp size={20} />
+        </button>
+      </motion.div>
     </section>
   );
 };
