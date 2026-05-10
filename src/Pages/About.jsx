@@ -35,7 +35,7 @@ const About = () => {
             <img src="https://imglink.cc/cdn/JMKx4R8muY.png" alt="" />
           </div>
           <div className="flex-1 ">
-  <div className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-4">
+  <div className="text-gray-300 text-lg md:text-xl leading-relaxed space-y-4 px-2">
     <p>
       Dedicated <span className="font-semibold text-blue-400">Frontend Developer</span> with strong expertise in 
       <span className="font-semibold text-blue-400"> HTML5, CSS3, Tailwind/Bootstrap, JavaScript, and React</span>, 

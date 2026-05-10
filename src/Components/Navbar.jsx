@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 bg-slate-700 shadow-md z-50">
-      <div className="max-w-9xl mx-auto flex justify-between items-center p-4 sm:px-6 lg:px-28">
+      <div className="max-w-9xl mx-auto flex justify-between items-center p-4 md:p-3  sm:px-6 lg:px-12">
        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
   <img
     src="https://i.ibb.co/LzfD3XYr/Gemini-Generated-Image-5i6z1t5i6z1t5i6z-1.png"

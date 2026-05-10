@@ -56,7 +56,7 @@ const Skills = () => {
       </motion.div>
 
       {/* 🔹 Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-2">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white text-center uppercase">
           My Skills
@@ -67,7 +67,7 @@ const Skills = () => {
         </p>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 ">
           {skillsData.map((skill, index) => (
 
             <motion.div
