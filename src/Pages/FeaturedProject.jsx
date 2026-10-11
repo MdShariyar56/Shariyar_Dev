@@ -21,6 +21,21 @@ const projects = [
     client: "https://github.com/MdShariyar56/NaturalWrite",
     reverse: false,
   },
+  {
+  title: "NoorPath – Islamic Platform",
+  type: "Live Project",
+  image: "https://imglink.cc/cdn/6QlSUZagUD.png",
+  description:
+    "An Islamic platform for Quran, Hadith, duas, and prayer times.",
+  challenge:
+    "Integrating Islamic APIs with a smooth and responsive user interface.",
+  goal:
+    "Build a modern platform for accessible Islamic knowledge and daily worship.",
+  tech: ["Next.js", "React", "Tailwind CSS", "Firebase"],
+  live: "https://noorpath-ten.vercel.app/",
+  client: "https://github.com/MdShariyar56/Noorpath",
+  reverse: false,
+},
 
   {
     title: "CreatifyAI – AI Video Generator",
